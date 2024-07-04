@@ -1,4 +1,4 @@
-# nkodapu-server
+# web-egg-pug
 
 ## QuickStart
 
@@ -36,11 +36,3 @@ $ npm stop
 - DB.Base uid='site'
 
 ## Version
-
-### v1.0.2
-
-- 图片缩略图
-
-### v1.0.4
-
-- 新增品牌栏目
