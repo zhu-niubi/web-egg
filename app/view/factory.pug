@@ -1,0 +1,169 @@
+extend layout/main
+
+block tdk
+  -
+    var tdk = {
+      title: '工厂介绍 - 纳科达',
+      description: '纳科达是一家TPU聚氨酯薄膜生产厂家，TPU隐形车衣生产厂家，PPF漆面保护膜生产厂家，可应用于汽车领域，光电领域，建筑领域',
+      keywords: '纳科达TPU聚氨酯应用领域，TPU隐形车衣应用汽车领域，TPU薄膜应用光电领域，TPU薄膜应用建筑领域'
+    }
+
+block content
+  //  Page Intro 
+  section#inner-intro.inner-intro.bg-image.overlay-dark40.dark-bg.parallax.parallax-background2(data-background-img='/img/full/fac-01.jpg')
+    .container
+      .intro-content
+        .intro-content-inner
+          h1 工厂介绍
+          h5.alt-title.intro-sub-title Factory
+  //  End Page Intro 
+
+  //  Service Section 
+  -
+    var appList1 = [
+      {
+        title: '工厂介绍',
+        subtitle: '隐形车衣 超级工厂',
+        iconPath: '/img/icon/05.png'
+      },
+      {
+        title: '经营范围',
+        subtitle: '全产业链制造商 涉猎于四个领域',
+        iconPath: '/img/icon/06.png'
+      },
+      {
+        title: '专利荣誉',
+        subtitle: '纳琳威集团135+ 纳科达车衣项目41+',
+        iconPath: '/img/icon/07.png'
+      },
+      {
+        title: '发展历程',
+        subtitle: '初心启程 迭代向前',
+        iconPath: '/img/icon/08.png'
+      }
+    ]
+
+  section.section-padding-t
+    .container.text-center
+      .row
+        each item in appList1
+          .col-md-3.content-box.mb-45.mb-sm-45
+            img.alt-icon-top(src= item.iconPath, style="width: 48px;")
+            h4.alt-title= item.title
+            p= item.subtitle
+  //  End Service Section 
+
+  // 工厂介绍
+  section.section-padding-t
+    .container
+      .row
+        .col-md-12.content-box.mb-sm-45
+          h1.alt-title 隐形车衣 超级工厂
+        .col-md-8.content-box.mb-sm-45
+          p 纳科达工厂位于江苏省南通市高新技术产业开发区，工厂占地100亩，已投资近5亿元建成42000㎡的全产业制造基地，产能达到300万㎡/月。纳科达专注于全球高端TPU薄膜的研发与生产，与美国亨斯迈达成大中华区专供专销、与日本三井达成TPU原料颗粒全球专供专销协议，占据全球60%优质TPU原料资源。进口全球优质的TPU薄膜生产设备，构建从功能母粒-原膜-涂布-分切检验-成品车衣的全产业链供应体系，实现产品持续迭代，新品类首创开发。
+
+          p 拥有一支涵盖弹性体高分子材料、机械设备、涂布工程和生产工艺核心研发团队，创造了全套的独有工艺技术，包括双层共挤技术、自修复涂层技术等，开创“真漆膜”新品类。通过了包含IATF16949、ISO9001、ISO14001在内的多项认证。
+
+          p 作为值得信赖的合作伙伴，纳科达秉承诚实信用的商业准则，与客户建立良好的合作关系，为客户提供多样化的产品和OEM/ODM定制服务。
+        .col-md-4
+
+  // 经营范围
+  -
+    var appList2 = [
+      {
+        title: '汽车领域',
+        subtitle: '漆面保护 车窗保护 内饰保护',
+        iconPath: '/img/icon/05.png'
+      },
+      {
+        title: '光电领域',
+        subtitle: '屏幕保护 内防爆膜 外防爆膜 曲面保护',
+        iconPath: '/img/icon/06.png'
+      },
+      {
+        title: '建筑领域',
+        subtitle: '夹胶防爆 家居保护',
+        iconPath: '/img/icon/07.png'
+      },
+      {
+        title: '其他领域',
+        subtitle: '医疗领域 军事领域 飞机高铁 风力发电',
+        iconPath: '/img/icon/08.png'
+      }
+    ]
+
+  section.section-padding-t
+    .container
+      .row
+       .col-md-12.content-box.mb-sm-45
+          h1.alt-title 经营范围
+      .row
+        each item in appList2
+          .col-md-3.content-box.mb-45.mb-sm-45
+            img.alt-icon-top(src= item.iconPath, style="width: 48px;")
+            h4.alt-title= item.title
+            p= item.subtitle
+  //  End Service Section 
+
+  // 专利荣誉
+  section.section-padding-t
+    .container
+      .row
+        .col-md-12.content-box.mb-sm-45
+          h1.alt-title 专利荣誉
+      .row
+        .col-md-9
+          h3.alt-title 管理体系
+          img(src= '/img/full/fac-honor.png', style="max-width: 100%")
+        .col-md-12
+          p
+
+      .row
+        .col-md-12
+          h4.alt-title 专利证书
+          p 纳科达母公司纳琳威集团申请专利数135+  其中发明专利44项，已获得101项知识产权授权
+          p 纳科达车衣项目专利数达41项
+
+      .row
+        .col-md-12
+          h4.alt-title 研发基地
+          p 配备3所研发实验室、中试基地
+
+      .row
+        .col-md-12
+          h4.alt-title 技术荣誉
+          h5.alt-title 纳琳威集团
+          p 2017年，荣获国家高新技术企业称号；
+          p 2018年，与同济大学建立博士后创新实践基地；
+          p 2018年，获得“上海市科技小巨人培育企业”荣誉称号；
+          p 2019年，获得上海市“专精特新”企业认证，入选首批国家级“专精特新小巨人”企业名单；
+          p 2020年，获得第六届“纳米之星”创新创业大赛全国总决赛三等奖&商业模式奖；
+          p 2020年，与上海交通大学联合成立博士后工作站；
+          p 2020年，被工信部工业企业知识产权运用试点单位；
+          p 2021年，获得粤港澳大湾区高价值专利培育布局大赛发明成长组百强；
+          p 2021年，入选“上海市社会责任报告”选树名单；
+          p 2021年，荣获新材料协会2021年度优秀会员单位；
+          p 2021年，入选国家级重点专精特新“小巨人”名单，获得“上海市科技小巨人企业”认证 ；
+
+        .col-md-12
+          h5.alt-title 纳科达公司
+          p 2022年，荣评中华全国工商业联合会汽车经销商商会“年度最有价值供应商”
+
+  section.section-padding
+    .container
+      .row
+        .col-md-12
+          h3.alt-title 发展历程(大事件)
+          p 2017年09月-“初心启程”，纳科达NKODA正式成立
+          p 2017年10月-“精尖赋能”，引进世界级全套薄膜生产设备，自主升级改造
+          p 2017年12月-“自研突破”，自修复涂层核心技术自研成功，并申请了技术专利
+          p 2018年05月-“定义标准”，领头起草《汽车漆面保护膜》《汽车装饰用品采购规范》
+          p 2018年06月-“正式量产”，百亩生产基地建成投产，TPU年产能1000万㎡
+          p 2018年12月-“实现从0-1”，迎来第一位车主的装贴
+          p 2020年11月-“硬核联手”，与世界五百强日本三井化学、美国亨斯迈正式签约战略合作，达成原料专供
+          p 2021年05月-“锐意新生 ”，迎来第50万卷车衣膜下线的里程碑时刻
+          p 2021年08月-“启航未来” ，纳科达全国首家隐形车衣体验中心圆满落成
+          p 2021年09月-“品类首创” ，TPU真漆改色膜品类首次亮相
+          p 2022年03月-“全新上线”  ，1.83M超宽幅、真炫彩系列产品上线
+          p 2022年05月-“问世即巅峰” ，14mil/16mil王者铠甲上线
+          p 2022年07月-“迭代向前” ，TPU真漆改色膜2.0版

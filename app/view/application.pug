@@ -1,0 +1,54 @@
+extend layout/main
+
+block tdk
+  -
+    var tdk = {
+      title: '应用领域 - 纳科达',
+      description: '纳科达是一家TPU聚氨酯薄膜生产厂家，TPU隐形车衣生产厂家，PPF漆面保护膜生产厂家，可应用于汽车领域，光电领域，建筑领域',
+      keywords: '纳科达TPU聚氨酯应用领域，TPU隐形车衣应用汽车领域，TPU薄膜应用光电领域，TPU薄膜应用建筑领域'
+    }
+
+block content
+  //  Page Intro 
+  section#inner-intro.inner-intro.bg-image.overlay-dark40.dark-bg.parallax.parallax-background2(data-background-img='/img/full/car-01.jpg')
+    .container
+      .intro-content
+        .intro-content-inner
+          h1 应用领域
+          h5.alt-title.intro-sub-title Our Application
+  //  End Page Intro 
+
+  //  Service Section 
+  -
+    var appList = [
+      {
+        title: '汽车领域',
+        subtitle: '漆面保护 车窗保护 内饰保护',
+        iconPath: '/img/icon/05.png'
+      },
+      {
+        title: '光电领域',
+        subtitle: '屏幕保护 内防爆膜 外防爆膜 曲面保护',
+        iconPath: '/img/icon/06.png'
+      },
+      {
+        title: '建筑领域',
+        subtitle: '夹胶防爆 家居保护',
+        iconPath: '/img/icon/07.png'
+      },
+      {
+        title: '其他领域',
+        subtitle: '医疗领域 军事领域 飞机高铁',
+        iconPath: '/img/icon/08.png'
+      }
+    ]
+
+  section#service.section-padding
+    .container.text-center
+      .row
+        each item in appList
+          .col-md-3.content-box.mb-45.mb-sm-45
+            img.alt-icon-top(src= item.iconPath, style="width: 48px;")
+            h4.alt-title= item.title
+            p= item.subtitle
+  //  End Service Section 

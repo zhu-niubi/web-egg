@@ -1,0 +1,58 @@
+@import "variables";
+@import "custom.bootstrap.variables";
+
+// Vendor
+@import "../vendor/bootstrap/scss/bootstrap.scss";
+@import "../vendor/fontawesome/css/all.min.css";
+@import "../vendor/jarallax/jarallax.css";
+@import "../vendor/magnific/magnific-popup.css";
+@import "../vendor/owl-carousel/css/owl.carousel.min.css";
+@import "../vendor/themify-icons/themify-icons.css";
+@import "../vendor/et-line/style.css";
+@import "../fonts/fonts.css";
+
+
+// Core
+@import "base/core/fonts";
+@import "base/core/functions";
+@import "base/core/breakpoints";
+@import "base/core/spinner";
+@import "base/core/type";
+@import "base/core/button";
+@import "base/section/section";
+@import "base/core/card";
+@import "base/core/nav";
+@import "base/core/breadcrumb";
+@import "base/core/colors";
+@import "base/core/background";
+@import "base/core/effect";
+@import "base/core/image";
+@import "base/core/icon";
+@import "base/core/badge";
+@import "base/core/seperators";
+@import "base/core/list";
+@import "base/core/mask";
+@import "base/core/opacity";
+@import "base/core/zindex";
+@import "base/core/owl";
+@import "base/core/portfolio";
+@import "base/core/page.title";
+@import "base/core/article";
+@import "base/core/device";
+@import "base/core/avatar";
+@import "base/core/form";
+@import "base/core/media";
+@import "base/core/hover";
+@import "base/core/shadow";
+@import "base/core/process-bar";
+@import "base/core/team";
+@import "base/core/tabs";
+@import "base/core/pie-chart";
+
+
+// Header
+@import "base/header/header";
+
+
+// Footer
+@import "base/footer/footer";

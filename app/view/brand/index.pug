@@ -1,0 +1,48 @@
+extend ../layout/main
+
+block tdk
+  -
+    var tdk = {
+      title: 'TPU膜生产厂家,隐形车衣生产厂家 - 纳科达',
+      description: '纳科达提供TPU聚氨酯薄膜,TPU隐形车衣,PPF漆面保护膜,TOP系列,LAND系列,光致色变系列',
+      keywords: '产品介绍,TPU聚氨酯薄膜生产厂家,隐形车衣生产厂家,PPF漆面保护膜生产厂家, TOP系列,LAND系列,光致色变系列'
+    }
+
+block content
+  //  Page Intro 
+  section#inner-intro.inner-intro.bg-image.overlay-dark40.dark-bg.parallax.parallax-background2(data-background-img='/img/full/brand-01.jpg')
+    .container
+      .intro-content
+        .intro-content-inner
+          h1 品牌中心
+          h5.alt-title.intro-sub-title Our Brand
+  //  End Page Intro 
+
+  //  About Section 
+  -
+    var brands = payload.brands || [
+      { name: 'NKDPPF', title: 'NKDPPF', img: '/img/brand/NKDPPF.svg', url: 'https://www.nkdppf.com' },
+      { name: 'KINGPPF', title: '王者铠甲', img: '/img/brand/KINGPPF.svg' },
+      { name: 'ASLF', title: '爱色丽', img: '/img/brand/ASLF.svg', url: '#' },
+    ]
+
+  section.section-padding
+    .container
+      .row.justify-content-md-center
+        // Post Col
+        each item in brands
+          - itemUrl = item.url ? item.url : `/${locale}/brand/${item.name}.html`
+          - itemTarget = item.url && item.url!=='#' ? '_blank' : '_self'//_self:在当前窗口打开；_blank:另起一个窗口
+
+          .col-md-3.col-sm-4.mb-45.text-center
+            //  Post 
+            .blog-post
+              .post-media
+                //- a(href= item.link)
+                a(href=itemUrl, target=itemTarget)
+                  img(src= item.img, alt= item.title)
+              .post-header
+                h4.alt-title
+                  a(href=itemUrl, target=itemTarget)= item.title
+                  //- a(href= item.link)= item.title
+          //  End Post 

@@ -1,0 +1,148 @@
+extends ../layout/main.pug
+
+block tdk
+    -
+        var tdk = {
+            title: '汽车改色膜_家具漆面保护膜_隐形车衣_脂肪族TPU薄膜-南通纳科达聚氨酯科技',
+            description: '南通纳科达聚氨酯科技有限公司主营:漆面改色膜,隐形车衣,车衣膜,漆面保护膜,PPF,TPU保护膜,TPU薄膜,脂肪族TPU膜,家具漆面保护膜,汽车漆面保护膜,汽车改色膜,车身改车色膜等,我们研制的TPU材料广泛应用于社会生活和生产中的各个领域，使产品更耐用、更舒适、具有更高的环保性能。',
+            keywords: '漆面改色膜,隐形车衣,车衣膜,漆面保护膜,PPF,TPU保护膜,TPU薄膜,脂肪族TPU膜,家具漆面保护膜,汽车漆面保护膜,汽车改色膜,车身改车色膜'
+        }
+
+block content
+    //- banner
+    section.pt-0
+        .bg-img.cover-background.theme-overlay-blue-dark.h-pc(
+            data-background="/img/bg/bg-05.jpg"
+            )
+        .container
+            .row
+                .col-lg-12
+                    .breadcrumb
+                        ul
+                            li
+                                a(href="index-movers.html") Home
+                            li
+                                a(href="#!") Solution
+                            li
+                                a(href="#!") Project Details
+
+    //- 产品
+    .pt-0
+        .section-heading4.wow.fadeIn(data-wow-delay="300ms")
+            h1
+                strong 隐形车衣
+        .container
+            // 短幅
+            .row.wow.fadeIn(data-wow-delay="400ms")
+                .col-md-4.mt-1-9
+                    .row
+                        .col-md-5.flex.flex-column.col-sm-5.col-5
+                            h4 XDI系列
+                            p xxxxxxxxx
+                        img.c-50.col-md-5.w-20.h-25.col-sm-5.col-5(src="/img/logos/favicon.png")
+                        div
+                            img.card-style45.card.border-radius-15.border-0(
+                                alt="..." 
+                                src="/img/bg/content-01.jpg"
+                            )
+                .col-md-4.mt-1-9
+                    .row
+                        .col-md-5.flex.flex-column.col-sm-5.col-5
+                            h4 NCUP系列
+                            p xxxxxxxxx
+                        img.c-50.col-md-5.w-20.h-25.col-sm-5.col-5(src="/img/logos/favicon.png")
+                        div
+                            img.card-style45.card.border-radius-15.border-0(
+                                alt="..." 
+                                src="/img/bg/content-01.jpg"
+                                )
+                .col-md-4.mt-1-9.card.border-radius-15.bg-img.cover-background.shadow.h-p(data-background="/img/bg/content-01.png")
+            // 长幅1
+            .row.wow.fadeIn(data-wow-delay="420ms")
+                .col-md-12.mt-1-9
+                    .row
+                        .col-md-5.flex.flex-column
+                            h4 1.84M超宽幅 漆面保护膜
+                            p xxxxxxxxxxxxxxxxxxxx
+                        div
+                            img.card-style45.card.border-radius-15.border-0.w-100(
+                                alt="..." 
+                                src="/img/bg/bg-05.jpg"
+                                )
+            // 中幅
+            .row.wow.fadeIn(data-wow-delay="440ms")
+                // 质量认证
+                .col-md-4.mt-1-9.card.border-radius-15.bg-img.cover-background.shadow.h-p(data-background="/img/bg/content-01.png")
+                .col-md-8.mt-1-9
+                    .row
+                        .col-md-5.flex.flex-column
+                            h4 漆面保护膜 7mil-12mil
+                            p xxxxxxxxx
+                    div
+                        img.card-style45.card.border-radius-15.border-0.w-100(
+                            alt="..." 
+                            src="/img/bg/bg-05.jpg"
+                            )
+            // 长幅2
+            .row.wow.fadeIn(data-wow-delay="460ms")
+                .col-md-12.mt-1-9
+                    .row
+                        .col-md-5.flex.flex-column
+                            h4 14Mil超厚 漆面保护膜
+                            p xxxxxxxxx
+                    div
+                        img.card-style45.card.border-radius-15.border-0.w-100(
+                            alt="..." 
+                            src="/img/bg/bg-05.jpg"
+                            )
+            // NKODA
+            .col-md-12.mt-1-9
+                img.w-100(
+                    alt="..." 
+                    src="/img/bg/bg-05.jpg"
+                    )
+
+    //- 
+    section.tan-bg
+        .container
+            .section-heading3.text-white
+                span Our xxx
+                .heading-seprator
+                h2.text-white 探索聚焦
+            .blog2-carousel.owl-carousel.owl-theme.wow.fadeIn(data-wow-delay="400ms")
+                -
+                    var j_info = [
+                        {
+                            "name": "【正直 探索 进化 共生】",
+                            "icon": "/img/logos/favicon.png",
+                            "image": "/img/bg/portfolio-01.jpg"
+                        },
+                        {
+                            "name": "【正直 探索 进化】",
+                            "icon": "/img/logos/favicon.png",
+                            "image": "/img/bg/portfolio-01.jpg"
+                        },
+                        {
+                            "name": "【正直 探索】",
+                            "icon": "/img/logos/favicon.png",
+                            "image": "/img/bg/portfolio-01.jpg"
+                        }
+                    ]
+                each j in j_info
+                    article.card.card-style28.bg-img.cover-background(data-background=`'${j.image}'`)
+                        .card-body.position-relative.p-0
+                            .post-author
+                                a.author-image(href="#!")
+                                    img(
+                                        alt="..." 
+                                        src=`${j.icon}`
+                                        )
+                                a.author-name(href="#!") #{j.name}
+                            .content
+                                //- .text-white.mb-3(v-if="post.date")
+                                //-     i.ti-calendar.text-white.pe-2
+                                //-         | {{ post.date }}
+                                h4.h5.mb-0
+                                    a(href="#!") ABOUT NKODA
+                                .post-exeption 
+                                    p.mb-0.d-none.d-sm-block They offer a value estimate and timeline for expected repairs, and entire the paintings upon customer approval. They additionally offer habitual maintenance, customization, and troubleshooting.

@@ -1,0 +1,291 @@
+
+extend layout/main
+
+block tdk
+  -
+    var tdk = {
+      title: '汽车改色膜_家具漆面保护膜_隐形车衣_脂肪族TPU薄膜-南通纳科达聚氨酯科技',
+      description: '南通纳科达聚氨酯科技有限公司主营:漆面改色膜,隐形车衣,车衣膜,漆面保护膜,PPF,TPU保护膜,TPU薄膜,脂肪族TPU膜,家具漆面保护膜,汽车漆面保护膜,汽车改色膜,车身改车色膜等,我们研制的TPU材料广泛应用于社会生活和生产中的各个领域，使产品更耐用、更舒适、具有更高的环保性能。',
+      keywords: '漆面改色膜,隐形车衣,车衣膜,漆面保护膜,PPF,TPU保护膜,TPU薄膜,脂肪族TPU膜,家具漆面保护膜,汽车漆面保护膜,汽车改色膜,车身改车色膜'
+    }
+
+block content
+
+  //- banner
+  .top-position1.z-index-1
+    .common-banner
+      .owl-carousel.owl-theme.w-100
+        .text-start.item.bg-img.cover-background.theme-overlay-blue-dark(data-background='/img/banner/1-banner.png')
+          .container.h-100
+            .d-table.h-100.w-100
+              .d-table-cell.align-middle
+                .w-95.w-md-85.w-lg-70.w-xxl-65.mt-5.mt-sm-0
+                  .border-start.border-primary.border-width-4.ps-4.mb-2-5
+                    span.title-font.text-primary.display-22.display-sm-17.display-lg-12.text-animations(data-in-effect='fadeInRight') TPU PPF.COLOR PPF.
+                    h1.text-white.display-17.display-sm-12.display-md-10.display-lg-6.display-xl-3.font-weight-700
+                      span.font-weight-more 14MIL &amp; 1.84M PPF.
+                      |  WINDOW FILM.
+                      //- | #{payload.test} 后端数据这样使用
+                      //- a.butn.mb-2.mb-sm-0(href='/contactus.html') Contact us
+                      //- a.butn.white.secondary-hover.ms-1.ms-sm-3(href='/aboutus.html') Learn more
+
+  //- 品类
+  div.categories.wow.fadeIn(data-wow-delay="380ms")
+    -
+      var cg_info = [
+        {
+          "id": 0,
+          "name": "漆面保护膜",
+          "image": "/img/producttype/qimianbaohu.png",
+          "color": "#000000",
+          "index": 01
+        },
+        {
+          "id": 1,
+          "name": "TPU改色膜",
+          "image": "/img/producttype/TPUzhenqigaise.png",
+          "color": "#cccccc",
+          "index": 02
+        },
+        {
+          "id": 2,
+          "name": "1.84超宽幅",
+          "image": "/img/producttype/1.84chaokuan.png",
+          "color": "#999999",
+          "index": 03
+        },
+        {
+          "id": 3,
+          "name": "14mil超厚",
+          "image": "/img/producttype/14MILchaohou.png",
+          "color": "#666666",
+          "index": 04
+        }
+      ]
+    each cg in cg_info
+      .category-item(style=`--default-color: ${cg.color};` onmouseover=`activateCategoryItem(${cg.id})` onmouseleave=`deactivateCategoryItem(${cg.id})`)
+        .category-background
+        .category-title
+          span.category-index #{cg.index}
+          span.category-text #{cg.name}
+        a(href="/" class="mb-2 mb-sm-0 category-button") LEARN MORE
+        .category-image(style=`background-image: url('${cg.image}');`)
+
+  //- 纳科达介绍
+  .py-0.px-0.d2.wow.fadeIn(data-wow-delay="400ms")
+    .row.align-items-center.w-100.m-p-0
+      .col-lg-6.m-p-0
+        .mar-left
+          img#logo(
+            alt="logo" 
+            src="/img/logos/logo-inner.png"
+            )
+          h2.my-1-6.mb-md-1-9.font-weight-500 超级工厂
+          p.text-black 以TPU材料高端应用研发为核心.
+          p.text-black 以领先的生产设备和优良的制造工艺为基础.
+          p.text-black 打造漆面保护膜产业智造基地.
+          p.text-black.mt-xxl-5 精准构建从功能母粒-原膜-涂布-分切-成品车衣的全产业链供应体系.
+          p.text-black 满足现代化生活和工业对弹性体材料不断升级的需求.
+          .row.mar-top
+            .col-lg-6
+              .media
+                .media-body
+                  .align-self-center
+                    h4.h3 全球TOP
+                    p.display-30.mb-0 先进TPU流延涂布生产线.
+            .col-lg-6
+              .media
+                .media-body
+                  .align-self-center
+                    h4.h3 全产业链生态
+                    p.display-30.mb-0 功能母粒-原膜-涂布-分切-成品.
+      .col-lg-6.m-p-0
+        img.w-100(
+          alt="..." 
+          src="/img/banner/nakedainfo.jpg"
+          )
+      //
+        <div class="col-lg-5 order-1 order-lg-2 mb-1-6 mb-lg-0">
+        <video autoplay loop muted class="rounded tilt" style="width: 100%;">
+        <source :src="videos[0].v" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        </div>
+    .w-100(style="height: 4rem;background-color: #FF4713;")
+
+
+  //- 技术介绍
+  .py-0
+    .container-fluid.px-0
+      .row.g-0.wow.fadeIn(data-wow-delay="380ms")
+        .col-xl-6.bg-img.cover-background(data-background="/img/bg/bg-01.jpg")
+          .py-8.w-sm-65.mx-auto.h-100
+            .testimonial4-carousel.owl-carousel.owl-theme
+              .testimonial-block
+                .mb-2-6.mb-md-5.mx-auto.text-center.w-md-90
+                  span.text-primary.letter-spacing-3.fw-bold.text-uppercase.mb-2.d-block 真漆车衣
+                  h6.text-white 推动汽车工艺从4变3
+                  h6.text-white 自研增厚纳米自修复涂层
+                  h6.text-white 多层共挤 一体成型技术
+                .position-relative.bg-img.cover-background(
+                  data-background="/img/producttype/zhenqi.png" 
+                  style="height: 302px;"
+                  )
+              .testimonial-block
+                .mb-2-6.mb-md-5.mx-auto.text-center.w-md-90
+                  span.text-primary.letter-spacing-3.fw-bold.text-uppercase.mb-2.d-block 隐形车衣
+                  h6.text-white 携手科思创“定义下一代车衣”
+                  h6.text-white 聚碳酸酯TPU全新上市
+                  h6.text-white 隐匿无踪 展现真我
+                .position-relative.bg-img.cover-background(
+                  data-background="/img/producttype/xiayidai.png"
+                  style="height: 302px;"
+                  )
+        .col-xl-6
+          .row.g-0.h-100
+            .col-sm-6.bg-img.cover-background.min-height-350(data-background="/img/bg/content-02.png")
+            .col-sm-6
+              .testimonial-side-content.position-relative.px-1-6.px-md-6.py-1-6.py-sm-0.h-100(style="background-color: #D2D2D2;")
+                .d-table.h-100.w-100
+                  .d-table-cell.align-middle.h-100.w-100.text-center
+                    h3.h4.text-black.mb-0 GIGAFACTORY.
+                    h6.text-black 超级工厂 超级高能
+                    .icon.d-none.d-sm-block
+                      img(
+                        alt="..." 
+                        src="/img/icons/icon-01.png"
+                        )
+            .col-sm-6.order-2.order-sm-1
+              .testimonial-side-content.position-relative.px-1-6.px-md-6.py-1-6.py-sm-0.h-100(style="background-color: #D2D2D2;")
+                .d-table.h-100.w-100
+                  .d-table-cell.align-middle.h-100.w-100
+                    h3.h4.text-black.mb-0 构建全产业链 标杆级生产线
+                    h6.text-black 拥有全球首屈一指的TPU流延全套设备生产线
+                    .icon.d-none.d-sm-block
+                      img(
+                        alt="..." 
+                        src="/img/icons/icon-02.png"
+                        )
+            .col-sm-6.bg-img.cover-background.min-height-350.order-1.order-sm-2(data-background="/img/bg/content-01.png")
+
+  //- 企业编年史
+
+  .py-0.wow.fadeIn(data-wow-delay="400ms")
+    img#qiye.w-100(src="/img/bg/biannianshi.png")
+
+  //- 远销全球
+  .bg-img.cover-background.sale.wow.fadeIn(
+    data-background="/img/bg/yuanxiaoquanqiu.png" 
+    data-wow-delay="380ms"
+    )
+    .container-fluid.px-0
+      .border-primary.border-width-4.ps-4.mb-2-5
+        h1.text-white.display-19.display-sm-17.display-lg-12.text-animations.font-weight-more(data-in-effect="fadeInRight")
+          strong 产品远销全球
+        h1.text-primary.display-17.display-sm-12.display-md-10.display-lg-6.display-xl-3.text-animations.font-weight-more(data-in-effect="fadeInLeft") 100+国家和地区
+        .col-md-6.mb-1-9.mb-md-6
+          h6.text-white 经历多年海外贸易拓展
+          h6.text-white 产品远销东南亚、美国、欧洲等
+          h6.text-white 深受2,000,000+车主深度认可和信赖
+          .row.counter.mt-n1-9.z-index-9.position-relative
+            .col-sm-6.col-lg-3.mt-1-9
+              div
+                h1.text-primary
+                  span.countup 60
+                  | +
+                span.text-white.display-26.font-weight-600 纳米材料专家团队
+            .col-sm-6.col-lg-3.mt-1-9
+              div
+                h1.text-primary
+                  span.countup 20
+                  | +
+                span.text-white.display-26.font-weight-600 纳米材料专利发明
+            .col-sm-6.col-lg-3.mt-1-9
+              div
+                h1.text-primary
+                  span.countup 100
+                  | +
+                span.text-white.display-26.font-weight-600 TPU专用修复涂层
+
+  //- 生产版图
+
+  .bg-img.cover-background.ban.wow.fadeIn(
+    data-background="/img/bg/shengchanbantu.png" 
+    data-wow-delay="380ms"
+    )
+    .container
+      .team-carousel.owl-carousel.owl-theme.wow.fadeIn(data-wow-delay="400ms")
+        -
+          var c_info = [
+            {
+              "img": "/img/banner/team-01.png",
+              "name": "南通中试",
+              "desc": "产业基地"
+            },
+            {
+              "img": "/img/banner/team-02.png",
+              "name": "上海松江",
+              "desc": "研发基地"
+            },
+            {
+              "img": "/img/banner/team-03.png",
+              "name": "上海中试",
+              "desc": "产业基地"
+            }
+          ]
+        each c in c_info
+          .team-wrapper.p-w
+            .card.card-style5.border-0.border-radius-none
+              .overflow-hidden.position-relative
+                img.w-100(
+                  src=c.img
+                  )
+              .card-body.text-center.bg-secondary.p-4
+                h3.h5.lh-1
+                  a.text-primary(href="/") #{c.name}
+                span.display-29.text-white #{c.desc}
+
+
+  //- 其他领域
+
+  .bg-img.cover-background.qt.wow.fadeIn(
+    data-background="/img/bg/qt.png" 
+    data-wow-delay="380ms"
+    )
+
+  //- 价值观
+
+  .bg-img.cover-background.jia.wow.fadeIn(
+    data-background="/img/bg/jiazhi.png" 
+    data-wow-delay="400ms"
+    )
+
+  //- 活动版块
+
+  .bg-very-light-gray.py-16
+    .container
+      .section-heading.wow.fadeInDown(data-wow-delay="100ms")
+        h1.text-primary.font-weight-more 不断进化 筑梦未来
+        span EVOLVING TO BUILD THE FUTURE
+    .portfolio3-carousel.owl-carousel.owl-theme.py-px-10.wow.fadeIn(data-wow-delay="380ms")
+      -
+        var images = [
+          '/img/act/h-1.png',
+          '/img/act/h-2.png',
+          '/img/act/h-3.png',
+          '/img/act/h-4.png',
+          '/img/act/h-5.png',
+          '/img/act/h-6.png',
+          '/img/act/h-7.png',
+          '/img/act/h-8.png',
+          '/img/act/h-9.png',
+          '/img/act/h-10.png',
+          '/img/act/h-11.png'
+        ]
+      each imgSrc in images
+        .card.card-style21
+          img.card-img-top.border-radius-none(
+            alt="Project image" 
+            src=imgSrc
+          )
+    .w-100(style="height: 4rem;background-color: #FF4713;")

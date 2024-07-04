@@ -1,0 +1,83 @@
+extend layout/main
+
+block tdk
+  -
+    var tdk = {
+      title: '联系我们- 纳科达',
+      description: '纳科达联系方式, TPU聚氨酯薄膜生产厂家，TPU隐形车衣生产厂家，TPU漆面保护膜生产厂家',
+      keywords: '纳科达联系方式'
+    }
+
+block content
+  //  Page Intro 
+  section#inner-intro.inner-intro.bg-image.overlay-dark40.dark-bg.parallax.parallax-background2(data-background-img='/img/full/contact-01.jpg')
+    .container
+      .intro-content
+        .intro-content-inner
+          h1 联系我们
+          h5.alt-title.intro-sub-title We will get back to you as soon as possible.
+  //  End Page Intro 
+  
+  //  Contact Infobar Section 
+  section.ptb-60.text-center
+    .container
+      .row
+        .col-md-3.col-sm-6.mb-sm-30
+          .contact-info
+            .alt-icon-top
+              i.icon-phone
+            p.large 021-6458 9999
+            p.large 138 1796 9999
+
+        .col-md-6.col-sm-12.mb-sm-30
+          .contact-info
+            .alt-icon-top
+              i.icon-map-pin
+            p.large
+              | 运营中心: 上海市闵行区顾戴路2337号维璟中心D栋18B
+            p.large
+              | 工厂地址: 江苏省南通市通州区高新技术产业开发区金桥西路999号
+        
+        .col-md-3.col-sm-6.mb-sm-30
+          .contact-info
+            .alt-icon-top
+              i.icon-envelope
+            p.large service@nkodapu.com
+  //  End Contact Infobar Section 
+
+  hr
+
+  //  Contact Section 
+  section.section-padding
+    .container.text-center
+      h1 在线留言
+      p.lead-lg.max-width-700.mb-60 我们会尽快与您取得联系
+      //  Contact form 
+      .row
+        .col-md-8.offset-md-2
+          form#contact.contact-form.row(role='form')
+            .col-md-12.text-center
+              h5.successContent
+                i.fa.fa-check.left(style='color: #5cb45d;')
+                | Your message has been sent successfully.
+
+              h5.errorContent(style='color: #e1534f;')
+                i.fa.fa-exclamation-circle.left
+                | There was a problem validating the form please check!
+
+            .col-md-6
+              .form-field-wrapper
+                input.input-lg.form-full#form-name(type='text', name='form-name', placeholder='Your Name', required)
+            .col-md-6
+              .form-field-wrapper
+                input.input-lg.form-full#form-email(type='email', name='form-email', placeholder='Email', required)
+            .col-md-12
+              .form-field-wrapper
+                input.input-lg.form-full#form-subject(type='text', name='form-subject', placeholder='Subject')
+            .col-md-12
+              .form-field-wrapper
+                textarea.home-contact-txt-msg.input-lg.form-full#form-message(rows='7', name='form-message', placeholder='Your Message', required)
+            .col-md-12
+              button.btn-contact-submit.btn.btn-lg.btn-black#form-submit(type='submit', name='submit', data-umami-event='contact submit') Send Message
+      //  End Contact form 
+  //  End Contact Section 

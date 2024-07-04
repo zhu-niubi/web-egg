@@ -1,0 +1,210 @@
+.categories {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+
+  align-items: center;
+}
+
+.category-item {
+  position: relative;
+  transition: all 0.8s ease;
+  overflow: hidden;
+  cursor: pointer;
+  width: 70%;
+  position: relative;
+}
+
+.category-title {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+  font-size: 24px;
+  color: white;
+  z-index: 2;
+  transition: all 0.8s ease;
+}
+
+.category-index {
+  font-size: 50px;
+  font-weight: bolder;
+  margin-right: 20px;
+}
+
+.category-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.category-button {
+  position: absolute;
+  top: 84%;
+  right: 0;
+  transform: translate(0, -50%);
+  padding: 8px 16px;
+  background-color: #ff4713;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.category-button:hover {
+  background-color: #e67c5e;
+}
+
+.category-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.8s ease;
+  opacity: 0;
+}
+
+.category-item.active .category-image {
+  opacity: 1;
+}
+
+.category-item .category-background {
+  width: 100%;
+  height: 100px;
+  /* 默认高度 */
+  background-color: var(--default-color);
+  transition: height 0.8s ease;
+}
+
+.category-item.active .category-background {
+  height: 400px;
+}
+
+.stretch-text {
+  display: inline-block;
+  transform: scale(1.2, 0.8);
+  /* 水平拉伸1.5倍，垂直压扁0.8倍 */
+  transform-origin: left center;
+}
+
+.sale {
+  width: 100%;
+  height: 52vw;
+  padding: calc(52vw / 4) 0px 0px calc(52vw / 5);
+}
+
+.ban {
+  width: 100%;
+  height: 44vw;
+  padding: calc(44vw / 2) 0px 0px 0px;
+}
+
+.qt {
+  width: 100%;
+  height: 87vw;
+}
+
+.jia {
+  width: 100%;
+  height: 56vw;
+}
+
+.mar-left {
+  margin-left: 15rem;
+}
+
+.mar-top {
+  margin-top: 10rem !important;
+}
+
+.d2 {
+  background-color: #d2d2d2 !important;
+}
+
+.m-p-0 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.py-16 {
+  padding-top: 16rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.py-px-10 {
+  padding-top: 10rem !important;
+  padding-bottom: 15rem !important;
+}
+
+.counter {
+  top: 400px;
+}
+
+@media (max-width: 768px) {
+  .sale {
+    height: 120vw;
+    padding: 0px 0px 0px calc(52vw / 8);
+  }
+
+  .mar-left {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+
+  .mar-top {
+    margin-top: 0rem;
+  }
+
+  .counter {
+    top: 0px !important;
+  }
+
+  .ban {
+    width: 100%;
+    height: 140vw;
+    padding: calc(200vw / 4) 0px 0px 0px;
+  }
+
+  .p-w {
+    width: 100% !important;
+    /* height: 26vw !important; */
+    /* border: solid; */
+  }
+  .py-16 {
+    padding-top: 2rem !important;
+    /* padding-bottom: 2rem !important; */
+  }
+
+  .py-px-10 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+
+}
+
+.p_card {
+  border-radius: 10px;
+  /* border: solid; */
+}
+.c-50 {
+  border-radius: 50%;
+}
+.tan-bg {
+  background-color: #000;
+}
+
+.h-pc {
+  height: 30vw !important;
+}
+@media (max-width: 768px) {
+  .h-p {
+    height: 80vw !important;
+  }
+}

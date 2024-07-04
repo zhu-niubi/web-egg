@@ -1,0 +1,40 @@
+extend ../layout/main
+
+block content
+  //  Page Intro 
+  section#inner-intro.inner-intro.bg-image.overlay-dark40.dark-bg.parallax.parallax-background2(data-background-img='/img/full/news-01.jpg')
+    .container
+      .intro-content
+        .intro-content-inner
+          h1 新闻资讯
+          h5.alt-title.intro-sub-title Our Latest News
+  //  End Page Intro
+
+  -
+    var newsList = payload.articleDocs || []
+
+  //  Blog Section 
+  section.section-padding
+    .container
+      .row
+        //  Post 
+        each newsItem in newsList
+          .col-md-4.col-sm-6.mb-sm-30.wow.fadeIn(data-wow-duration='2s', data-wow-delay='0.1s')
+            .blog-post
+              if newsItem.attachs && newsItem.attachs.length > 0
+                .post-media.nkd(style=`background-image:url(/attach/${newsItem.attachs[0]._id}?size=480x480)`)
+              .post-meta
+                span
+                  a(href="/")= newsItem.author
+                  | ,
+                span.post-date= newsItem.timeAt
+              .post-header
+                h4.alt-title
+                  a(href= `/${locale}/article/${newsItem._id}.html`)= newsItem.title
+              .post-entry
+                p= newsItem.digest
+              .post-tag
+                span
+                  a(href= `/${locale}/article/${newsItem._id}.html`) 详情
+        //  End Post
+            

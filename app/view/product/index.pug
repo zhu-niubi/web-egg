@@ -1,0 +1,39 @@
+extend ../layout/main
+
+block tdk
+  -
+    var tdk = {
+      title: 'TPU膜生产厂家，隐形车衣生产厂家 - 纳科达',
+      description: '纳科达提供TPU聚氨酯薄膜，TPU隐形车衣，PPF漆面保护膜，TOP系列，LAND系列，光致色变系列',
+      keywords: '产品介绍，TPU聚氨酯薄膜生产厂家，隐形车衣生产厂家，PPF漆面保护膜生产厂家, TOP系列，LAND系列，光致色变系列'
+    }
+
+block content
+  //  Page Intro 
+  section#inner-intro.inner-intro.bg-image.overlay-dark40.dark-bg.parallax.parallax-background2(data-background-img='/img/full/product-01.jpg')
+    .container
+      .intro-content
+        .intro-content-inner
+          h1 产品介绍
+          h5.alt-title.intro-sub-title Our Product
+  //  End Page Intro 
+
+  //  About Section 
+  -
+    var proSeries = payload.series || []
+
+  section.section-padding
+    .container
+      .row
+        // Post Col
+        each item in proSeries
+          .col-md-4.col-sm-6.mb-45
+            //  Post 
+            .blog-post
+              .post-media
+                a(href= item.link)
+                  img(src= item.img, alt= item.title)
+              .post-header
+                h4.alt-title
+                  a(href= item.link)= item.title
+          //  End Post 

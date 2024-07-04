@@ -1,0 +1,36 @@
+.page-heading {
+	padding-top: 12rem;
+	padding-bottom: 6rem;
+	background-size: cover;
+	position: relative;
+	@include media-breakpoint-down(md) {
+		padding-top: 7rem;
+		padding-bottom: 3rem;
+	}
+	.header-height ~ main & {
+		padding-top: 6rem;
+		@include media-breakpoint-down(md) {
+			padding-top: 3rem;
+		}
+	}
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+	.breadcrumb {
+		border: none;
+		padding: 0;
+		&.light {
+			.breadcrumb-item {
+				color: rgba($px-white, 0.7);
+				font-weight: 400;
+				&:before {
+					color: rgba($px-white, 0.2);
+				}
+				a {
+					color: $px-white;
+				}
+			}
+		}
+	}
+}

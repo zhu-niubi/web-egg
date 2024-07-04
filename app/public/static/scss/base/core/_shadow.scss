@@ -1,0 +1,38 @@
+// Hover shadow
+.shadow-hover {
+    box-shadow: $px-box-shadow;
+	transition: ease all 0.35s;
+    &:hover {
+        box-shadow: $box-shadow-lg;
+    }
+}
+
+.shadow-only-hover {
+	transition: ease all 0.35s;
+    &:hover {
+        box-shadow: $box-shadow-lg;
+    }
+}
+
+
+
+// Sm hover shadow
+.shadow-sm-hover {
+	&:hover {
+		box-shadow: $px-box-shadow-sm-hover !important;	
+	}
+}
+
+// hover shadow
+.shadow-hover {
+	&:hover {
+		box-shadow: $px-box-shadow-hover !important;	
+	}
+}
+
+// Lg shadow
+.shadow-lg-hover {
+	&:hover {
+		box-shadow: $px-box-shadow-lg-hover !important;	
+	}
+}

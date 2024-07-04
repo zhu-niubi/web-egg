@@ -1,0 +1,124 @@
+.owl-dots {
+    text-align: center;
+    .owl-main-slider & {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        font-size: 0px;
+    }
+    .owl-dot {
+        display: inline-block;
+        vertical-align: top;
+        width: 15px;
+        height: 15px;
+        background: $px-white;
+        border: 1px solid $px-primary;
+        transition: ease all 0.55s;
+        border-radius: 50%;
+        margin: 0 5px;
+        .owl-carousel-white & {
+            border-color: $px-white;
+            background: none;
+        }
+        &.active {
+            background: $px-primary;
+            .owl-carousel-white & {
+                background: $px-white;
+            }
+        }
+    }
+}
+
+.owl-carousel {
+    .owl-item {
+        img {
+            width: auto;
+            max-width: 100%;
+        }
+    }
+}
+
+.owl-no-overflow {
+    .owl-stage-outer {
+        overflow: inherit;
+    }
+}
+
+.owl-nav {
+    .owl-next,
+    .owl-prev {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 25px;
+        height: 40px;
+        margin: auto;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        color: $px-dark;
+        background: $px-white;
+        i {
+            line-height: inherit;
+        }
+        .owl-nav-arrow-bottom & {
+            position: relative;
+            display: inline-block;
+            margin-right: 6px;
+            width: 30px;
+            height: 30px;
+            background: $px-dark;
+            color: $px-white;
+            border-radius: 50%;
+            padding: 0;
+            line-height: 30px;
+            font-size: 13px;
+            
+            &:hover {
+                background: $px-primary;
+            }
+        }
+        .owl-nav-rounded & {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 22px;
+            @include media-breakpoint-down(md) {
+                width: 25px;
+                height: 25px;
+                font-size: 15px;
+            }
+        }
+        .owl-nav-rounded-sm & {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+        .owl-nav-dark & { 
+            color: $px-white;
+            background: $px-dark;
+        }
+    }
+    .owl-next {
+        right: 0;
+        .owl-nav-rounded & {
+            right: 20px;
+            @include media-breakpoint-down(md) {
+                right: 5px;
+            }
+        }
+    }
+    .owl-prev {
+        left: 0;
+        .owl-nav-rounded & {
+            left: 20px;
+            @include media-breakpoint-down(md) {
+                left: 5px;
+            }
+        }
+    }
+}

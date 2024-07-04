@@ -1,0 +1,42 @@
+.laptop-screen {
+	position: relative;
+	.laptop-screen-inner {
+		position: absolute;
+		width: 79.3%;
+		left: 10.5%;
+		top: 7.6%;
+		height: 80.5%;
+		border: 1px solid $px-gray-300;
+		border-radius: 10px;
+		overflow: hidden;
+		img {
+			-o-object-fit: cover;
+    		object-fit: cover;
+		}
+	}
+}
+
+.mobile-screen {
+	position: relative;
+	border: 10px solid $px-dark;
+	border-radius: 28px;
+	.mobile-hidden {
+		opacity: 0;
+		visibility: hidden;
+	}
+	.mobile-screen-in {
+	    position: absolute;
+	    top: 5px;
+	    left: 5px;
+	    right: 5px;
+	    bottom: 5px;
+	    overflow: hidden;
+	    border-radius: 18px;
+		img {
+			width: 100%;
+    		height: 100%;
+			-o-object-fit: cover;
+    		object-fit: cover;
+		}
+	}
+}

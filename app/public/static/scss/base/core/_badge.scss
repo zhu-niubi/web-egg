@@ -1,0 +1,8 @@
+@each $color, $value in $px-theme-colors {
+	.badge {
+		&-#{$color}-light {
+  			background: rgba($value, 0.2);
+  			color: $value;
+  		}
+	}	
+}

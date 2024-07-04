@@ -1,0 +1,28 @@
+.footer {
+	.footer-links {
+		margin: 0;
+		li {
+			+ li {
+				padding-top: 10px;
+			}
+		}
+	}
+	.footer-top {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		@include media-breakpoint-up(md) {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+	}
+	.footer-border {
+		border-top: 1px solid rgba($px-white, 0.1);
+		&.dark {
+			border-top: 1px solid rgba($px-dark, 0.1);
+		}
+	}
+}

@@ -1,0 +1,82 @@
+extends ../layout/main.pug
+
+block content
+  if payload.articleDoc
+    - const {author,content,title,timeAt,attachs} = payload.articleDoc
+    - const articleLatestDocs = payload.articleLatestDocs
+    - const {prevDoc, nextDoc} = payload.articleContextObj
+    //- | !{JSON.stringify(payload.articleLatestDocs)}
+
+    //  Page Intro 
+    section#inner-intro.inner-intro.bg-image.overlay-dark40.dark-bg.parallax.parallax-background2(data-background-img='/img/full/news-01.jpg')
+      .container
+        .intro-content
+          .intro-content-inner
+            h1 新闻资讯
+            h5.alt-title.intro-sub-title Our Latest News
+    //  End Page Intro
+
+    // Section --- 
+    section#blog-single.section-padding
+      .container
+        .row
+          .col-lg-8.col-xl-8
+            //  Post 
+            .blog-post
+              .post-meta
+                span
+                  a(href="/")= author
+                  | ,
+                span.post-date= timeAt
+              .post-header
+                h2.alt-title= title
+
+              //- if (attachs && attachs.length !==0)
+              //-   .post-media
+              //-     img(alt= title, src= attachs[0].path)
+              
+              .post-entry !{content}
+              
+              //- .post-tag
+              //-   span
+              //-     a(href='#') Branding
+              //-   span
+              //-     a(href='#') Design
+              //-   span
+              //-     a(href='#') Photography
+              
+              hr
+              
+            //  End Post
+
+            //- p  !{JSON.stringify(payload.articleContextObj)}
+            //  Next Prev pagination 
+            .pagination-nav.mt-60
+              ul
+                li.prev
+                  if prevDoc
+                    a(href= `${prevDoc._id}.html`, title= prevDoc.title)
+                      i.fa.fa-angle-left
+                      | #{prevDoc.title}
+                li.next
+                  if nextDoc
+                    a(href= `${nextDoc._id}.html`, title= nextDoc.title)
+                      | #{nextDoc.title}
+                      i.fa.fa-angle-right
+            //  Next Prev pagination 
+
+          .col-lg-4.my-3.ps-xl-9
+              .card.mt-5
+                .card-header.border-bottom.p-3
+                  span.h5.m-0 #{__('RecentPosts')}
+                .list-group.list-group-flush
+                  if articleLatestDocs
+                    each item in articleLatestDocs
+                      a.list-group-item.list-group-item-action.d-flex.py-3(href=`/${locale}/article/${item._id}.html`)
+                        .avatar.rounded.overflow-hidden
+                          if item.attachs[0]
+                            img(src=`${item.attachs[0].path || '/static/img/250x250.jpg'}` alt=item.title, style="max-width: 100%")
+                        .ps-3
+                          p.m-0.font-w-500.posts-line-height-50 #{item.title}
+
+      // End Section

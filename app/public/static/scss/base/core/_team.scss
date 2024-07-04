@@ -1,0 +1,53 @@
+.our-team {
+	.team-img {
+		position: relative;
+		img {
+			transform: scale(1);
+			transition: ease all 0.33s;
+		}
+	}
+	.team-desc {
+	    position: absolute;
+	    bottom: 0;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    opacity: 0;
+	    z-index: 1;
+	    transition: ease all 0.33s;
+	}
+	&:hover {
+		.team-img {
+			&:after {
+				opacity:0.6;
+			}
+			img {
+				transform: scale(1.1);
+			}
+		}
+		.team-desc {
+			opacity: 1;
+		}
+	}
+}
+
+.our-team-01 {
+	.team-img {
+		overflow: hidden;
+		position: relative;
+	}
+	.team-icon {
+		background: $px-white;
+		position: absolute;
+		padding: 8px 10px;
+		bottom: 10px;
+		left: -60px;
+		transition: ease all 0.35s;
+	}
+	&:hover {
+		.team-icon {
+			left: 10px;
+		}
+	}
+}

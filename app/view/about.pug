@@ -1,0 +1,71 @@
+extend layout/main
+
+block tdk
+  -
+    var tdk = {
+      title: '公司介绍 - 纳科达',
+      description: '纳科达介绍, TPU聚氨酯薄膜生产厂家，TPU隐形车衣生产厂家，TPU漆面保护膜生产厂家',
+      keywords: '纳科达介绍'
+    }
+
+block content
+  //  Page Intro 
+  section#inner-intro.inner-intro.bg-image.overlay-dark40.dark-bg.parallax.parallax-background2(data-background-img='/img/full/company-01.jpg')
+    .container
+      .intro-content
+        .intro-content-inner
+          h1 公司介绍
+          h5.alt-title.intro-sub-title About Us
+  //  End Page Intro 
+
+  //  About Section 
+  section#about.section-padding
+    .container
+      .row
+        .col-md-12.content-box.mb-sm-45
+          h4.alt-title 全球车衣膜 中国纳科达
+          p 选择不平凡，才能被瞩目，选择纳科达，成就与众不同。
+        .col-md-8.content-box.mb-sm-45
+          p 
+            | 南通纳科达聚氨酯科技有限公司（简称：“纳科达NKODA”）成立于2017年，隶属于纳琳威集团，是一家专注于高端脂肪族热塑性聚氨酯弹性体（TPU）薄膜研发、生产、销售及服务为一体的国际化新型材料公司。
+            | 产品广泛应用于汽车、光电、建筑等领域，致力于为全球客户提供差异化、定制化的材料解决方案和专业化的技术服务，满足现代化生活和工业对弹性体材料不断升级的需求。目前与200多个国家和地区的客户建立了业务关系，帮助客户提高产品的商业价值。
+          p 公司旗下有“NKDPPF”、“伊斯夫”等多品牌矩阵，聚焦汽车领域的外观升级与人车防护，主打汽车漆面保护膜、真漆改色膜、高功能窗膜产品 ，致力于为全球车主带来全效保护的至臻体验。
+        .col-md-4
+          
+  //  End About Section 
+
+  //  Testimonials Section 
+  section#testimonials.section-padding.gray-bg.bg-image.pos-section
+    //  page triangle shape 
+    .page-triangle.white-bg
+    //  End page triangle shape 
+    .container
+      .owl-carousel.testimonial-carousel.nf-carousel-theme
+        //- .item
+        //-   .testimonial.text-center.max-width-700
+        //-     .page-icon-sm.dark
+        //-       i.icon-quote
+        //-     h2 IATF16949:2016版汽车质量管理体系标准
+        //-     p.lead-lg IATF16949认证涵盖了ISO9001的所有标准，但是又对特定的汽车行业做了很多补充和更高要求
+ 
+        .item
+          .testimonial.text-center.max-width-700
+            .page-icon-sm.dark
+              i.icon-quote
+            p.lead-lg 纳科达作为行业标准的起草单位，为行业的健康发展贡献力量。根据工业和信息化部办公厅下达的工信厅科（2018）73号文，由中国建材检验认证集团股份有限公司负责的计划号为2018-2094T-QC的《汽车漆面保护膜》行业标准的制定工作已开始启动。
+            h6.quote-author.alt-title
+              | 起草单位
+              span.text-regular (之一)
+        .item
+          .testimonial.text-center.max-width-700
+            .page-icon-sm.dark
+              i.icon-quote
+            h2 《汽车装饰用品采购规范》
+            p.lead-lg CADA团体标准《汽车装饰用品采购规范》，本标准按照GB/T 1.1—2009 给出的规则起草，中国汽车流通协会提出并归口。纳科达公司作为本标准起草单位之一。
+            h6.quote-author.alt-title
+              | 起草单位
+              span.text-regular (之一)
+  //  End Testimonials Section 
+  
+  section.text-center.gray-bg
+    img.img-fluid(src="/img/full/about-02.jpg")

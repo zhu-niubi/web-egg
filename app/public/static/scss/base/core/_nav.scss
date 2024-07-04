@@ -1,0 +1,15 @@
+.nav-tabs {
+	.nav-link {
+		color:$px-nab-tabs-link-color;
+	}
+}
+
+.nav-link {
+	color:$px-nav-link-color;
+	&.active {
+		color: $px-nav-link-active-color;
+	}
+	&:hover {
+		color: $px-nav-link-hover-color;
+	}
+}

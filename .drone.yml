@@ -1,0 +1,69 @@
+kind: pipeline
+name: nkodapu-server-deploy
+
+node:
+  runner: nlxweb
+
+workspace:
+  path: /drone/src
+
+steps:
+
+  - name: build eggjs server
+    image: node:18
+    pull: if-not-exists
+    commands:
+      - echo build
+      - echo "$PWD"
+      - npm config set registry https://registry.npmmirror.com
+      - npm config get registry
+      - npm run dist
+      - cp ../dist-server.tgz .
+
+  - name: scp files
+    image: appleboy/drone-scp
+    pull: if-not-exists
+    settings:
+      host:
+        from_secret: NLXWEB_HOST
+      username:
+        from_secret: NLXWEB_USER
+      key:
+        from_secret: NLXWEB_SSHKEY
+      port:
+        from_secret: NLXWEB_PORT
+      target: /opt/nkodapu/apps/server
+      source:
+        - ./dist-server.tgz
+        - package.json
+      overwrite: true
+
+  - name: ssh
+    image: appleboy/drone-ssh
+    pull: if-not-exists
+    settings:
+      host:
+        from_secret: NLXWEB_HOST
+      username:
+        from_secret: NLXWEB_USER
+      key:
+        from_secret: NLXWEB_SSHKEY
+      port:
+        from_secret: NLXWEB_PORT
+      command_timeout: 10m
+      script:
+        - echo "start deploy ..."
+        - node -v
+        - npm -v
+        - cd /opt/nkodapu/apps/server
+        - tar -xvf ./dist-server.tgz
+        - docker-compose ps
+        - docker-compose restart server
+        # - docker-compose up -d --remove-orphans server
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
+

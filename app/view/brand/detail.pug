@@ -1,0 +1,365 @@
+extends ../layout/main.pug
+
+block head
+    link(href='/css/brand.css', rel='stylesheet', type='text/css')
+    script(src='https://unpkg.com/axios/dist/axios.min.js')
+
+block content
+    if payload.brandDoc.title
+      - const {title} = payload.brandDoc
+      section#intro.intro.black-bg
+          //- banner
+          .position-relative
+              video.bg-img-center.js-fullscreen-height.my-video(src='/video/brand_kappf.m4v' muted autoplay loop )
+              .position-absolute.op
+                  .row
+                      .col-12.content-space-01.text-center
+                          p.cj.font1 PIANT PROTECTION FILM
+                          h2.cj.height1 NKD 王者铠甲
+                          h1.sc 首创14MIL超厚隐形铠甲
+                          h1.sc 让王者风采跃然于身
+                          span.cj.height2 突破行业极限为爱车顶配护航
+                          p.cj 果敢无畏 · 开创未来
+                          a.bg2(style='color:#fff') ABOUT NKODA
+      //- 纳科达王者铠甲
+      .bg-img-center(style='background-image: url(/img/king-1/02_t.gif); height: 600px;')
+          .row
+              .col-12.content-space-02.text-center
+                  h2.cg 纳科达 · 隐形车衣超级工厂
+                  h6.yw.height2 SUPER FACTORY
+                  h6.yw.height2 PAINT PROTECTION FILM
+      //- 小红车
+      .bg-img-center(style='background-image: url(/img/king-1/05_t.gif); height: 1200px;')
+          .row
+              .col-12.content-space-02.text-center
+                  p.cj.font2 <span style="font-weight: bold; color: #d6be86;">NKD王者铠甲<sup style="font-size: 0.6em;">®</sup></span>诞生于隐形车衣超级工厂纳科达
+                  p.cj.font2 作为
+                      span.font3 汽车漆面保护膜行业标准制定者
+                  p.cj.font2
+                      span.font3 TPU全产业链生产企业
+                  p.cj.font2 工厂专注于优质TPU基膜生产
+                  p.cj.font2 潜心研究就每一个环节·方铸王者铠甲之姿
+          .row(style="width:1000px;margin-left:25%")
+              .col-4.text-center
+                  p.cj.lrg.font12
+                      span#num1
+                      span(style="font-size: 1.2em; font-weight: bolder") +
+              .col-4.text-center
+                  p.cj.lrg.font12
+                      span#num2
+                      span(style="font-size: 1.2em; font-weight: bolder") +
+              .col-4.text-center
+                  p.cj.lrg.font12
+                      span#num3
+                      span(style="font-size: 1.2em; font-weight: bolder") +
+
+          .row(style="margin-top: 20px;width:1000px;margin-left:25%")
+              .col-4.text-center
+                  p.cj.font2 车主深度认可
+              .col-4.text-center
+                  p.cj.font2 国家和区域客户的选择
+              .col-4.text-center
+                  p.cj.font2 TPU基膜月产能
+
+
+      .bg-img-center.height1(style='background-image: url(/img/king-1/05_tt.gif); width: 100%;height: 600px;')
+          .row
+              .col-12.content-space-03.text-start2
+                  h2.sc(style="font-size:50px;color:#f4cb90") 王者
+                      <span style="font-size: 35px;color:#f4cb90">K1000<span>
+                  div.zt.tm(style="color:#f4cb90") 厚，不止于厚
+                  h2.sc(style="color:#f4cb90") ￥59900
+                  a.bg(href='#') 了解更多
+              .col-12.content-space-03.text-start2
+                  img.img-fluid.mb-4(src='/img/king-1/icon14mil.png' width=200 height=100 alt='Image Description')
+
+
+      //- 产品图
+      .container.content-space-1
+          .row.row-cols-1.row-cols-sm-2.row-cols-md-3
+              .col.mb-5.mb-md-0
+                  a.card.card-ghost.card-transition-zoom.w-100
+                      .card-transition-zoom-item
+                          img.card-img(src='/img/king-1/001_t.png' alt='Image Description')
+              .col.mb-5.mb-md-0
+                  a.card.card-ghost.card-transition-zoom.w-100
+                      .card-pinned.card-transition-zoom-item
+                          img.card-img(src='/img/king-1/002_t.png' alt='Image Description')
+              .col.mb-5.mb-md-0
+                  a.card.card-ghost.card-transition-zoom.w-100
+                      .card-transition-zoom-item
+                          img.card-img(src='/img/king-1/003_t.png' alt='Image Description')
+              .col.mb-5.mb-md-0
+                  a.card.card-ghost.card-transition-zoom.w-100
+                      .card-transition-zoom-item
+                          img.card-img(src='/img/king-1/004_t.png' alt='Image Description')
+              .col.mb-5.mb-md-0
+                  a.card.card-ghost.card-transition-zoom.w-100
+                      .card-transition-zoom-item
+                          img.card-img(src='/img/king-1/005_t.png' alt='Image Description')
+      //- 睿雅
+      .bg-img-center.height1(style='background-image: url(/img/king-1/ry.gif); width: 100%;height: 700px;')
+          .row
+              .col-12.content-space-06.text-start3
+                  span.h2.sc(style='color: #fadd9e') 睿雅 <span style="font-size: 20px;color: #fadd9e">KE75 L<span>
+                  //img.img-fluid.mb-4(src='/img/king-1/004.png' width=30 height=20 alt='Image Description')
+                  div.tm(style='color: #fadd9e') 1.84M超宽幅隐形车衣<span style="font-size:10px">（7.5mil）</span>
+                  span.h2.sc(style='color: #f4cb90') ￥15800
+                  p.cj1.font4 专为特殊结构的爱车量身打造，避免拼接出现脏线等问题。
+                  p.cj1.font4 主力技师们轻松搞定每一款车型
+                  a.bg1(href='#') 了解更多
+      .bg-img-center.height1(style='background-image: url(/img/king-1/zbcx.gif); width: 100%;height: 600px;')
+          .row
+              .col-12.content-space-06.text-start4
+                  span.tx 质保查询
+                  p.tx1 您购买的每一卷<span style="color: #0b0b0b; font-size: 1rem; font-weight: bolder;">NKD王者铠甲隐形车衣</span>
+                  p.tx1 都将享受来自品牌官方的质量保障
+                  <span style="color: #0b0b0b; font-size: 1rem; font-weight: bolder;">请扫码查询</span>
+                  p.tx1 或者联系我们的售后服务团队获取更多服务咨询！
+                  img(src= '/img/brand/zhibao.jpg', style='height:100px;width:100px;border-radius:20px')
+
+
+
+      .bg-img-center.height3(style='background-image: url(/img/king-1/user.gif); width: 100%;height: 1200px;')
+          .row
+              .col-12.content-space-06.text-start4
+                  span.h2.sc 一省一代 等你来战
+                  p.cj(style="margin-top: 1.6em") 我们能正在寻找志同道合的伙伴
+                  p.cj 立足当下，着眼于可持续发展的未来！
+              form(style='position: absolute; padding-top: 200px',
+                  onsubmit='onSubmit(); return false;')
+                  .mb-3
+                      label.form-label(for="name" )
+                      input(
+                          type="text" class="form-control col-sm-3"
+                          id="name"
+                          style="background-color: black; " +
+                          "color: white; border-color: gray; " +
+                          "position: absolute; right: 100px;"
+                          placeholder="请输入您的姓氏")
+                  .mb-3.form-check(style="position: absolute;right: 100px; margin-top: 10px;")
+                      label.form-check-label(for="male", id="maleLabel" onclick="setGenderValue(1)") 男士
+                      label.form-check-label(for="female", id="femaleLabel" onclick="setGenderValue(0)") 女士
+                      input(
+                          type="hidden"
+                          id="genderInput"
+                          name="gender"
+                          value=1
+                      )
+
+                  .mb-3
+                      label.form-label(for="phone")
+                      input(
+                          type="number"
+                          class="form-control col-sm-3"
+                          id="phone"
+                          style="background-color: black; " +
+                          "color: white; " +
+                          "border-color: gray; " +
+                          "position: absolute;" +
+                          "right: 100px;margin-top: 60px;"
+                          placeholder="请输入手机号")
+                      button.btn.btn-primary(
+                          type="button"
+                          style="color: white; " +
+                          "position: absolute;" +
+                          "right: 100px; " +
+                          "margin-top: 55px;"
+                          onclick="sendVerificationCode()"
+                      ) 发送验证码
+
+                  .mb-3
+                      label.form-label(for="code")
+                      input(
+                          type="number"
+                          class="form-control col-sm-3"
+                          id="code"
+                          style="background-color: black; " +
+                          "color: white; " +
+                          "border-color: gray; " +
+                          "position: absolute;" +
+                          "right: 100px;margin-top: 80px;"
+                          placeholder="请输入验证码")
+                  .mb-3
+                      label.form-label(for="address")
+                      input(
+                          type="text"
+                          class="form-control col-sm-3"
+                          id="address"
+                          style="background-color: black; " +
+                          "color: white; " +
+                          "border-color: gray; " +
+                          "position: absolute;" +
+                          "right: 100px;margin-top: 100px;"
+                          placeholder="请输入个人地址")
+                  button.btn(
+                      type="submit"
+                      style="color: white; " +
+                      "position: absolute;" +
+                      "right: 100px; " +
+                      "margin-top: 120px;"
+
+                  ) 提交
+
+
+
+          .row
+              a.tooltip-container(href='#')
+                  img(src= '/img/brand/tiktok.svg', alt= '#', style='position: absolute; bottom: -53px;right: 100px;')
+                  .tooltip-content
+                      img(src= '/img/brand/dy.jpg', alt= 'tiktok', style='border-radius:20px')
+              a.tooltip-container(href='#')
+                  img(src= '/img/brand/wechat.svg', alt= '#', style='position: absolute; bottom: -57px;right: 200px;')
+                  .tooltip-content
+                      img(src= '/img/brand/wx.jpg', alt= 'WeChat', style='border-radius:20px')
+
+
+
+      script.
+
+        function onSubmit() {
+          // 获取表单数据
+          const name = document.getElementById('name').value;
+          const gender = document.getElementById('genderInput').value;
+          const phone = document.getElementById('phone').value;
+          const code = document.getElementById('code').value;
+          const address = document.getElementById('address').value;
+
+          const formData = {
+            name: name,
+            gender: gender,
+            phone: phone,
+            code: code,
+            address: address
+          };
+
+          // 在这里可以执行表单提交的操作，比如发送到服务器或其他处理
+          console.log('Form data to submit:', formData);
+          // 使用 Axios 发送 POST 请求
+          axios.post(`/v1/postCustom`, formData)
+            .then(function(response) {
+              // console.log('Server response:', response.data);
+              if ( response.data.res.success ) {
+                alert('我们已经了解您的意向，请稍等我们工作人员会稍后联系您！');
+              } else {
+                if ( response.data.res.type === 1 ) {
+                  alert('请填写您的姓氏');
+                }
+                if (response.data.res.type === 2) {
+                  alert('请填写您的地址');
+                }
+                if (response.data.res.type === 3) {
+                  alert('请填写正确的手机号');
+                }
+                if (response.data.res.type === 4) {
+                  alert('验证码错误！');
+                }
+                if (response.data.res.type === 5) {
+                  alert('缺少验证码或手机号');
+                }
+                if (response.data.res.type === 6) {
+                  alert('提交失败，请稍后');
+                }
+              }
+            })
+            .catch(function(error) {
+              console.error('Error:', error);
+              // 处理请求错误
+            });
+        }
+
+
+        //发送验证码
+        function sendVerificationCode() {
+          // const code = generateVerificationCode();
+          const phoneNumber = document.getElementById('phone').value;
+          const Data = {
+            phoneNumber: phoneNumber
+          }
+          axios.post(`/v1/sendCode`, Data)
+            .then(function(response) {
+              console.log('Server response:', response.data);
+              if (response.data.res.success) {
+                alert('验证码发送成功，有效期三分钟！');
+              } else {
+                alert('验证码发送频繁！');
+              }
+            })
+            .catch(function(error) {
+              console.error('Error:', error);
+              // 处理请求错误
+            });
+        }
+        //选中性别样式变换
+        const maleLabel = document.getElementById('maleLabel');
+        const femaleLabel = document.getElementById('femaleLabel');
+
+        maleLabel.addEventListener('click', function() {
+          maleLabel.style.color = 'white';
+          femaleLabel.style.color = '';
+
+        });
+        //为男士女士赋值
+        function setGenderValue(gender) {
+          // console.log('===========================')
+          document.getElementById("genderInput").value = gender;
+          if (gender === 1) {
+            maleLabel.style.color = 'white';
+            femaleLabel.style.color = '';
+          } else if (gender === 0) {
+            femaleLabel.style.color = 'white';
+            maleLabel.style.color = '';
+          }
+        }
+
+
+
+        //页面动态数字脚本
+        function NumAutoPlusAnimation(targetEle, options) {
+
+          options = options || {};
+
+          var $this = document.getElementById(targetEle),
+            time = options.time || $this.data('time'),
+            finalNum = options.num || $this.data('value'),
+            regulator = options.regulator || 100,
+
+            step = finalNum / (time / regulator),
+            count = 0,
+            initial = 0;
+
+          var timer = setInterval(function() {
+
+            count = count + step;
+
+            if (count >= finalNum) {
+              clearInterval(timer);
+              count = finalNum;
+            }
+
+            var t = Math.floor(count);
+            if (t == initial) return;
+
+            initial = t;
+
+            $this.innerHTML = initial;
+          }, 30);
+        }
+
+        NumAutoPlusAnimation("num1", {
+          time: 10000,
+          num: 2000000,
+          regulator: 50
+        })
+        NumAutoPlusAnimation("num2", {
+          time: 10000,
+          num: 100,
+          regulator: 50
+        })
+        NumAutoPlusAnimation("num3", {
+          time: 10000,
+          num: 3000000,
+          regulator: 50
+        })
+
+    

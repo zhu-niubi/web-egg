@@ -1,0 +1,6 @@
+.history
+node_modules
+run
+logs
+typings
+config/config.default.js

@@ -1,0 +1,57 @@
+/*-----------------------------------------------------------------------------------
+
+    Theme Name: Services - The Best Service Industry Theme
+    Description: The Best Service Industry Theme
+    Author: Chitrakoot Web
+    Version: 2.0
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+			[ All CSS Plugins & Default Classes File ]
+-----------------------------------------------------------------*/
+
+/* == bootstrap == */
+@import url("plugins/bootstrap.min.css");
+
+/* == animate Headline == */
+@import url("plugins/animate.css");
+
+/* == et-line icon font == */
+@import url("plugins/et-line.css");
+
+/* == fontawesome icon font == */
+@import url("plugins/fontawesome-all.min.css");
+
+/* == themify font == */
+@import url("plugins/themify-icons.css");
+
+/* == magnific-popup == */
+@import url("plugins/magnific-popup.css");
+
+/* == owl.carousel == */
+@import url("plugins/owl.carousel.css");
+
+/* == owl theme.carousel == */
+@import url("plugins/owl.theme.default.css");
+
+/* == lightgallery css == */
+@import url("plugins/lightgallery.css");
+
+/* == jarallax css == */
+@import url("plugins/jarallax.css");
+
+/* == default classes == */
+@import url("plugins/default.css");
+
+/* == navigation == */
+@import url("plugins/nav-menu.css");
+
+/* == prism css == */
+@import url("plugins/prism.css");
+
+/* == xzoom css == */
+@import url("plugins/xzoom.css");
+
+/* == datetimepicker css == */
+@import url("plugins/datetimepicker.css");

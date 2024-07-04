@@ -1,0 +1,101 @@
+// Type display classes
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+	color: $px-headings-color;
+  letter-spacing: -.02em;
+	.white-text & {
+		color: $px-headings-color-light;
+	}
+}
+h1,
+.h1 {
+  margin-bottom: $px-display-margin-bottom - 0.5rem;
+}
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  @include media-breakpoint-up(md) {
+    margin-bottom: $px-display-margin-bottom;
+  }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	.text-white & {
+		color: $px-headings-color-light;
+	}
+}
+
+.white-link {
+  a {
+	color: $px-light-link-color;
+	&:hover {
+	  color: $px-light-link-color-hover;
+	}
+  }
+}
+
+.dark-link {
+  a {
+  color: $px-dark-link-color;
+  &:hover {
+    color: $px-dark-link-color-hover;
+  }
+  }
+}
+
+
+mark,
+.mark {
+	color: inherit;
+	padding: 0;
+	background: 0 0;
+	background-image: $px-mark-bg;
+	background-repeat: no-repeat;
+	background-size: 100% .3em;
+	background-position: 0 80%;
+	position: relative;
+}
+
+
+.line-height {
+  line-height: 1.5;
+}
+
+@include media-breakpoint-down(md) {
+    .lead {
+        font-size: 1rem; 
+    }
+}
+
+/* Font wight
+--------------------*/
+@for $i from 1 through 9 {
+  .font-w-#{$i * 100} {
+    font-weight: #{$i * 100}
+  }
+}
+
+/* Letter spacing
+-------------------------------*/
+@for $i from 1 through 10 {
+  .letter-spacing-#{$i} {
+    letter-spacing: #{$i}px;
+  }
+}
+
+
+.after-k:after {
+  content: "K";
+}
+
+.after-p:after {
+  content: "%";
+}
+
+.after-plus:after {
+  content: "+";
+}

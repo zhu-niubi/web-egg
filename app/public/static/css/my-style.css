@@ -1,0 +1,26 @@
+.font-12{
+  font-size: 12px;
+}
+.font-16{
+  font-size: 16px;
+}
+.home-line-height{
+  line-height: 60px;
+}
+.text-black{
+  color: #232323 !important;
+}
+.posts-line-height-50{
+  line-height: 50px;
+}
+.home-pros-height-80{
+  height: 80px;
+}
+.list-type-04 .proseries-pd-0{
+  padding-left: 0;
+}
+.menuBtn-position-right-10{
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}

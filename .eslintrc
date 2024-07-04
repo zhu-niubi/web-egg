@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  
+  "extends": ["eslint-config-egg"],
+
+  "rules": {
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "array-bracket-spacing": "off",
+    "semi": "off",
+    "comma-dangle": ["never"]
+  }
+}

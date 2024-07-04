@@ -1,0 +1,21 @@
+@each $color, $value in $px-grays {
+	.text-#{$color} {
+		color: $value; 
+	}	
+}
+
+
+/*	SVG fill
+---------------------------*/
+.svg_icon {
+	[fill]:not([fill=none]) {
+		fill: $px-svg-color;	
+	}
+}
+.svg_img {
+	polygon,
+	path,
+	circle {
+	  fill: $px-svg-color;
+	}
+}

@@ -1,0 +1,158 @@
+@mixin icon-variant($bg) {
+  color: px-color-yiq($bg);
+  background-color: $bg;
+}
+
+@mixin icon-variant-hover($bg) {
+  color: px-color-yiq($bg);
+  background-color: darken($bg, 10%);
+}
+
+@mixin icon-variant-light($bg, $text) {
+  color: $text;
+  background-color: $bg;
+}
+
+.icon {
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 0.375rem;
+    width: 3rem;
+    height: 3rem;
+	svg,
+	i{
+		font-size: 1.125rem;
+	}
+    .svg_icon {
+        width: 1.85rem;
+        height: 1.85rem;
+    }
+    &-sm {
+    	width: 2rem;
+        height: 2rem;
+        svg,
+    	i {
+    		font-size: .75rem;
+    	}
+        .svg_icon {
+            width: .85rem;
+            height: .85rem;
+        }
+    }
+    &-xl {
+    	width: 5rem;
+    	height: 5rem;
+    	svg,
+    	i {
+    		font-size: 2.25rem;
+    	}
+        .svg_icon {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+    &-lg {
+    	width: 4rem;
+    	height: 4rem;
+    	svg,
+    	i {
+    		font-size: 1.75rem;
+    	}
+        .svg_icon {
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+    }
+    &-xs {
+    	width: 1rem;
+    	height: 1rem;
+        svg,
+    	i {
+    		font-size: .5rem;
+    	}
+        .svg_icon {
+            width: 0.75rem;
+            height: 0.75rem;
+        }
+    }
+}
+
+.only-icon {
+    display: inline-flex;
+    svg,
+    i{
+        font-size: 2.2rem;
+    }
+    .svg_icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    &-sm {
+        svg,
+        i {
+            font-size: 1rem;
+        }
+        .svg_icon {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+    &-xl {
+        svg,
+        i {
+            font-size: 2.25rem;
+        }
+        .svg_icon {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+    }
+    &-lg {
+        svg,
+        i {
+            font-size: 3rem;
+        }
+        .svg_icon {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    }
+}
+
+@each $color, $value in $px-theme-colors {
+  	.icon {
+  		&-#{$color} {
+  			@include icon-variant($value);
+  		}
+  	}
+}
+@each $color, $value in $px-theme-colors {
+    a.icon {
+        &-#{$color} {
+            &:hover {
+                @include icon-variant-hover($value);
+            }
+        }
+    }
+}
+
+@each $color, $value in $px-theme-colors {
+	.icon {
+		&-#{$color}-light {
+  			@include icon-variant-light(rgba($value, 0.2), $value);
+  		}
+	}	
+}
+
+.feather {
+    width: 1em;
+    height: 1em;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

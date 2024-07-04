@@ -1,0 +1,249 @@
+doctype html
+head
+  // metas
+  meta(charset='utf-8')
+  - var tdk = {}
+  block tdk
+  title= tdk.title
+  meta(name='description', content= tdk.description)
+  meta(name='keywords', content= tdk.keywords)
+  meta(name='author', content='D.CHI')
+  meta(name='viewport', content='width=device-width,initial-scale=1,maximum-scale=1')
+  // favicon
+  link(rel='shortcut icon', type='image/x-icon', href='/img/logos/favicon.ico')
+  link(rel='icon', type='image/png', href='/img/logos/favicon.png')
+  link(rel='apple-touch-icon', href='/img/logos/favicon.png')
+
+  block head
+  // plugins
+  link(rel='stylesheet' href='/css/plugins.css')
+
+  // theme core css
+  link(href='/css/styles.css' rel='stylesheet')
+  // custom css
+  link(href='/css/custom.css' rel='stylesheet')
+  link(href='/css/index_c.css' rel='stylesheet')
+
+#preloader
+
+.main-wrapper
+
+  header.header-style1.menu_area-light(style="background-color: #000 !important;")
+    .navbar-default.border-bottom.border-color-light-white
+      .container-fluid.px-lg-1-6.px-xl-2-5.px-xxl-2-9
+        .row.align-items-center
+          .col-12
+            .menu_area.alt-font
+              nav.navbar.navbar-expand-lg.navbar-light.p-0
+                .navbar-header.navbar-header-custom
+                  // start logo
+                  a.navbar-brand.h-default(href='/index.html')
+                    img#logo(src='/img/logos/logo-inner.png' alt='logo')
+                  // end logo
+                .navbar-toggler
+                // menu area
+                ul#nav.navbar-nav.ms-auto(style='display: none;')
+                  li
+                    a(href='/') 首页
+                    //- ul
+                    //-   li
+                    //-     a(href='/') Moving Company
+                    //-   li
+                    //-     a(href='/') Gardener
+                    //-   li
+                    //-     a(href='/') Car Wash
+                  li
+                    a(href='/#!') 公司介绍
+                    //- ul
+                    //-   li
+                    //-     a(href='/aboutus.html') About Us
+                    //-   li
+                    //-     a(href='/company-history.html') Company History
+                    //-   li
+                    //-     a(href='/our-process.html') Our Process
+                    //-   li
+                    //-     a(href='/our-clients.html') Our Clients
+                    //-   li
+                    //-     a(href='/contactus.html') Contact Us
+                    //-   li
+                    //-     a(href='/#!') Services
+                    //-     ul
+                    //-       li
+                    //-         a(href='/services.html') Services
+                    //-       li
+                    //-         a(href='/service-details.html') Service Details
+                  li
+                    a(href='/#!') 全产业链布局
+                    //- ul
+                    //-   li
+                    //-     a(href='/#!') Headers
+                    //-     ul
+                    //-       li
+                    //-         a(href='/header-1.html') Header Style 1
+                    //-       li
+                    //-         a(href='/header-2.html') Header Style 2
+                    //-       li
+                    //-         a(href='/header-3.html') Header Style 3
+                    //-       li
+                    //-         a(href='/header-4.html') Header Style 4
+                    //-   li
+                    //-     a(href='/#!') Footers
+                    //-     ul
+                    //-       li
+                    //-         a(href='/footer-1.html') Footer Style 1
+                    //-       li
+                    //-         a(href='/footer-2.html') Footer Style 2
+                  li
+                    a(href='/#!') 解决办法
+                    ul
+                      li
+                        a(href=`/${locale}/solution/Invisible-livery.html`) 隐形车衣
+                      li
+                        a(href='/') 真漆车衣
+                      li
+                        a(href='/') 天窗冰甲
+                  li
+                    a(href='/#!') 职业生涯
+                    //- ul
+                    //-   li
+                    //-     a(href='/blog-grid.html') Blog Grid
+                    //-   li
+                    //-     a(href='/blog-list.html') Blog List
+                    //-   li
+                    //-     a(href='/blog-detail.html') Blog Detail
+                  li
+                    a(href='/#!') 媒体库
+                    //- ul
+                    //-   li
+                    //-     a(href='/product-grid.html') Product Grid
+                    //-   li
+                    //-     a(href='/product-detail.html') Product Detail
+                    //-   li
+                    //-     a(href='/cart.html') Cart
+                    //-   li
+                    //-     a(href='/checkout.html') Checkout
+                  //- li
+                  //-   a(href='/#!') 语言
+                  //-   ul
+                  //-     li
+                  //-       a(href='/project-3-column.html') CN
+                  //-     li
+                  //-       a(href='/project-4-column.html') EN
+                .attr-nav.align-items-lg-center.ms-lg-auto.main-font
+                  ul
+                    li.d-none.d-xl-inline-block
+                      a.butn.medium(href='/contactus.html')
+                        span 联系我们
+
+
+  block content
+block foot
+
+  footer
+    .container
+      .row.mt-n2-6
+        .col-sm-6.col-lg-3.mt-2-6.wow.fadeIn(data-wow-delay='200ms')
+          .mb-1-6.mb-lg-1-9
+            img(src='/img/logos/logo-inner.png' alt='...')
+          ul.contact-list
+            li
+              span.fa.fa-home.pe-3.text-white
+              a(href='/#!') 上海市闵行区顾戴路2337号6幢（D栋）16层B单元
+            li
+              span.fa.fa-phone.pe-3.text-white
+              a(href='/#!') 021-61159812
+            li
+              span.fa.fa-envelope.pe-3.text-white
+              a(href='/#!') service@nkodapu.com
+        .col-sm-6.col-lg-2.mt-2-6.wow.fadeIn(data-wow-delay='400ms')
+          .ps-sm-1-9.ps-lg-2-2.ps-xl-2-5
+            h3.h5.mb-1-6.mb-lg-1-9.text-primary Company
+            ul.footer-list-style1
+              li
+                a(href='/') About us
+              li
+                a(href='/') Careers
+              li
+                a(href='/') Our services
+              li
+                a(href='/') Contact us
+        //- .col-sm-6.col-lg-2.mt-2-6.wow.fadeIn(data-wow-delay='600ms')
+        //-   .ps-lg-2-2.ps-xl-2-5
+        //-     h3.h5.mb-1-6.mb-lg-1-9.text-primary Customer
+        //-     ul.footer-list-style1
+        //-       li
+        //-         a(href='/') Our clients
+        //-       li
+        //-         a(href='/') Testimonial
+        //-       li
+        //-         a(href='/') Pricing
+        //-       li
+        //-         a(href='/') Our process
+        //- .col-sm-6.col-lg-2.mt-2-6.wow.fadeIn(data-wow-delay='800ms')
+        //-   .ps-sm-1-9.ps-lg-2-2.ps-xl-2-5
+        //-     h3.h5.mb-1-6.mb-lg-1-9.text-primary Additional
+        //-     ul.footer-list-style1
+        //-       li
+        //-         a(href='/') Our story
+        //-       li
+        //-         a(href='/') Our Team
+        //-       li
+        //-         a(href='/') FAQ
+        //-       li
+        //-         a(href='/') Latest news
+
+    .footer-bar.borders-top.border-color-light-white.wow.fadeIn(data-wow-delay='1200ms')
+      .container
+        .row
+          .col-md-6.text-center.text-md-start.mt-3.mt-md-0.order-2.order-md-1
+            p.d-inline-block.text-white.mb-0
+              | &copy; 
+              span.current-year
+              |  Services is Powered by
+              a.text-primary.white-hover(href='/#!') NKODA
+          .col-md-6.text-center.text-md-end.order-1.order-md-2
+            p.text-white.d-inline-block.mb-0.align-middle 关注我们:
+            //- ul.footer-social-style1
+            //-   li
+            //-     a(href='/#!')
+            //-       i.fab.fa-facebook-f
+            //-   li
+            //-     a(href='/#!')
+            //-       i.fab.fa-twitter
+            //-   li
+            //-     a(href='/#!')
+            //-       i.fab.fa-youtube
+            //-   li
+            //-     a(href='/#!')
+            //-       i.fab.fa-linkedin-in
+
+a.scroll-to-top(href='/#!')
+  i.fas.fa-angle-up(aria-hidden='true')
+
+script(src='/js/jquery.min.js')
+script(src='/js/popper.min.js')
+script(src='/js/bootstrap.min.js')
+script(src='/js/nav-menu.js')
+script(src='/js/animated.headline.js')
+script(src='/js/easy.responsive.tabs.js')
+script(src='/js/owl.carousel.js')
+script(src='/js/owl.carousel.thumbs.js')
+script(src='/js/jquery.counterup.min.js')
+script(src='/js/jarallax.min.js')
+script(src='/js/jarallax-video.js')
+script(src='/js/jquery.stellar.min.js')
+script(src='/js/waypoints.min.js')
+script(src='/js/countdown.js')
+script(src='/js/datetimepicker.js')
+script(src='/js/jquery.magnific-popup.min.js')
+script(src='/js/lightgallery-all.js')
+script(src='/js/jquery.mousewheel.min.js')
+script(src='/js/isotope.pkgd.min.js')
+script(src='/js/wow.js')
+script(src='/js/jquery.lettering.js')
+script(src='/js/jquery.textillate.js')
+script(src='/js/tilt.js')
+script(src='/js/clipboard.min.js')
+script(src='/js/prism.js')
+script(src='/js/main.js')
+script(src='/js/custom.js')

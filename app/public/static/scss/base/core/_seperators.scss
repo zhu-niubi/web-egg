@@ -1,0 +1,40 @@
+.border-style {
+	position: relative;
+	&:after {
+		content: '';
+		display: block;
+		width: 80%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: 1px;
+		background: radial-gradient(ellipse at center, $px-gray-300 0, rgba($px-white, 0) 75%);
+	}
+	&.bottom {
+		&:after {
+			bottom:0;
+		}
+	}
+	&.top {
+		&:after {
+			top:0;
+		}
+	}
+	&.light {
+		&:after {
+			background: radial-gradient(ellipse at center, rgba($px-white, 0.2) 0, rgba(31, 45, 61, 0) 75%);
+		}
+	}
+}
+
+.separated {
+  overflow: hidden;
+	> * {
+	  box-shadow: -1px -1px 0px 0px #d9e2ef;
+	}
+}
+
+.border-light-rgb {
+	border-color: rgba($px-white, 0.3) !important;
+}

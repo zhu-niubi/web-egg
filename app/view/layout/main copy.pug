@@ -1,0 +1,140 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    - var tdk = {}
+    block tdk
+    title= tdk.title
+    meta(name='description', content= tdk.description)
+    meta(name='keywords', content= tdk.keywords)
+    meta(name='author', content='D.CHI')
+    meta(name='viewport', content='width=device-width,initial-scale=1,maximum-scale=1')
+    // [if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]
+    //  Favicone Icon 
+    link(rel='shortcut icon', type='image/x-icon', href='/img/favicon.ico')
+    link(rel='icon', type='image/png', href='/img/favicon.png')
+    link(rel='apple-touch-icon', href='/img/favicon.png')
+    //  Css 
+    link(href='/css/style.css', rel='stylesheet', type='text/css')
+    link(href='/css/bootstrap.css', rel='stylesheet', type='text/css')
+    link(href='/css/plugins/animate.css', rel='stylesheet', type='text/css')
+    block head
+    link(href='/css/nkoda.css', rel='stylesheet', type='text/css')
+    
+    // Matomo
+    script.
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//wa.nit.pub/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '2']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    // End Matomo Code
+    
+  body.wow-animate
+    //  Site preloader 
+    section#preloader
+      .site-spinner
+    //  End Site preloader
+
+    #page-wraper
+      //  Header 
+      header#header.header
+        .header-inner
+          //  Logo 
+          .logo
+            a(href='index.html')
+              img.logo-light(src='/img/logo-light.svg', alt='纳科达 NKODA')
+              img.logo-dark(src='/img/logo-dark.svg', alt='纳科达 NKODA')
+              
+          //  End Logo 
+          //  Mobile Navbar Icon 
+          .nav-mobile.nav-bar-icon
+            span
+          //  End Mobile Navbar Icon 
+          //  Navbar Navigation 
+          .nav-menu
+            ul.nav-menu-inner
+              li
+                a.current(href=`/${locale}/`) 首 页
+              li
+                a(href=`/${locale}/about.html`) 公司介绍
+              li
+                a(href=`/${locale}/factory.html`) 工厂介绍
+              li
+                a(href=`/${locale}/application.html`) 应用领域
+              li
+                a(href=`/${locale}/advantage.html`) 我们的优势
+              li
+                a(href=`/${locale}/product.html`) 产品介绍
+              li
+                a(href=`/${locale}/article.html`) 新闻资讯
+              li
+                a(href=`/${locale}/brand.html`) 品牌中心
+              li
+                a(href=`/${locale}/contact.html`) 联系我们
+              //- li
+              //-   a(href='/notice.html') 环评公示
+          //  End Navbar Navigation 
+      //  End Header 
+
+      block content
+
+    block foot
+      //  Footer Section 
+      footer#footer.footer.gray-bg
+        -
+          var brands = [
+            { name: 'NKDPPF', title: 'NKDPPF', img: '/img/brand/NKDPPF.svg', url: 'https://www.nkdppf.com' },
+            { name: 'KINGPPF', title: '王者铠甲', img: '/img/brand/KINGPPF.svg' },
+            { name: 'ASLF', title: '爱色丽', img: '/img/brand/ASLF.svg', url: '#' },
+          ]
+        .container.text-center
+          h6 旗下品牌
+          div.mb-60.wow.fadeInUp(data-wow-duration='1.5s')
+            each item in brands
+              - itemUrl = item.url ? item.url : `/${locale}/brand/${item.name}.html`
+              - itemTarget = item.url && item.url!=='#' ? '_blank' : '_self'
+
+              a(target= itemTarget, href= itemUrl, title= item.title)
+                img(src= item.img, width="48", alt= item.title)
+
+          p.copyright
+            | 南通纳科达聚氨酯科技有限公司 版权所有
+            br
+            a(href="https://beian.miit.gov.cn", target="_blank") 苏ICP备18007819号
+            br
+            a.scroll-top(href="#")
+              | ©2017-!{(new Date()).getFullYear()}
+
+          .hidden 
+            script(type='text/javascript') document.write(unescape("%3Cspan id='cnzz_stat_icon_1280380962'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1280380962%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+      //  End Footer Section 
+
+      // JS Script 
+      block scripts
+        script(src='/js/jquery-1.11.3.min.js', type='text/javascript')
+        script(src='/js/plugins/jquery.easing.js', type='text/javascript')
+        script(src='/js/plugins/owl.carousel.min.js', type='text/javascript')
+        script(src='/js/plugins/wow.min.js', type='text/javascript')
+        script(src='/js/plugins/isotope.pkgd.min.js', type='text/javascript')
+        script(src='/js/plugins/jquery.stellar.min.js', type='text/javascript')
+        script(src='/js/plugins/jquery.fitvids.js', type='text/javascript')
+        script(src='/js/plugins/jquery.magnific-popup.min.js', type='text/javascript')
+        script(src='/js/plugins/jquery.appear.js', type='text/javascript')
+        script(src='/js/plugins/jquery.countTo.js', type='text/javascript')
+        script(src='/js/plugins/jquery.mb.YTPlayer.min.js', type='text/javascript')
+        script(src='/js/plugins/jquery.simple-text-rotator.min.js', type='text/javascript')
+        script(src='/js/plugins/jquery.backstretch.js', type='text/javascript')
+        script(src='/js/plugins/jquery.singlePageNav.min.js', type='text/javascript')
+        script(src='/js/plugins/jquery.validate.min.js', type='text/javascript')
+        script(src='/js/send-subscribe.js', type='text/javascript')
+        script(src='/js/contact-form.js', type='text/javascript')
+        script(src='/js/theme.js', type='text/javascript')
+        script(src='/node_modules/unify/lib/unify.js', type='text/html')
+        script(defer, src="https://abc.nit.pub/nwa/script.js", data-website-id="2a3c9f80-0897-4528-8473-ed2ef7ef1364")
